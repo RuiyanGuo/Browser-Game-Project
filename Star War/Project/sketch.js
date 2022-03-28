@@ -1,7 +1,7 @@
 new p5();
 
 
-//颜色
+//Color
 var c1=Math.floor(Math.random()*500)
 var c2=Math.floor(Math.random()*500)
 var c3=Math.floor(Math.random()*500)
@@ -14,41 +14,41 @@ var c7=Math.floor(Math.random()*500)
 var c8=Math.floor(Math.random()*500)
 var c9=Math.floor(Math.random()*500)
 
-//球1小 数字位置
+//Ball1-s Numpos
 //var num1=Math.floor(Math.random()*10+1)
 //var num2=Math.floor(Math.random()*30+1)
-//球1小
+//Ball1-s
 var x=Math.floor(Math.random()*560+20)
 var y=20
-var w=Math.floor(Math.random()*5+1)//动态控制
-var m=Math.floor(Math.random()*5+1)//动态控制
+var w=Math.floor(Math.random()*5+1)//Motion Control
+var m=Math.floor(Math.random()*5+1)//Motion Control
 
 var x2=Math.floor(Math.random()*560+20)
 var y2=20
-var w2=Math.floor(Math.random()*5+1)//动态控制
-var m2=Math.floor(Math.random()*5+1)//动态控制
+var w2=Math.floor(Math.random()*5+1)//Motion Control
+var m2=Math.floor(Math.random()*5+1)//Motion Control
 
 var x4=300
 var y4=20
-var w4=-5//动态控制
-var m4=5//动态控制
+var w4=-5//Motion Control
+var m4=5//Motion Control
 
 var x3=20
 var y3=20
-var w3=5//动态控制
-var m3=5//动态控制
+var w3=5//Motion Control
+var m3=5//Motion Control
 
 var x6=580
 var y6=20
-var w6=-5//动态控制
-var m6=5//动态控制
+var w6=-5//Motion Control
+var m6=5//Motion Control
 
 var x5=Math.floor(Math.random()*560+20)
 var y5=20
-var w5=Math.floor(Math.random()*5+1)//动态控制
-var m5=Math.floor(Math.random()*5+1)//动态控制
+var w5=Math.floor(Math.random()*5+1)//Motion Control
+var m5=Math.floor(Math.random()*5+1)//Motion Control
 
-//球2大
+//Ball2-L
 //var q=80
 //var w=80
 //check
@@ -58,31 +58,22 @@ var tnt4=false
 //var cld1=false
 //var cld2=false
 //
-var xc=301//飞机球坐标
-var yc=573.5//飞机的坐标
-//炮弹
+var xc=301//Aircraft pos
+var yc=573.5//Aircraft pos
+//Bomb
 var num=0
 var tf1=false
 var ax=[301,301,301,301,301,301,301,301]
 var ay=[573.5,573.5,573.5,573.5,573.5,573.5,573.5,573.5]
 var shoot=[false,false,false,false,false,false,false,false]
 var cld=[false,false,false,false,false,false,false,false]
-//炮弹结束
+//Bomb end
 //new
 var n=301
 var e=100
 
 var sum=0
 var root=false
-
-
-
-
-
-
-
-
-
 
 
 function setup() {
@@ -127,18 +118,18 @@ if(!((Math.abs(xc-x)<=32.5&&Math.abs(yc-y)<=32.5)||(Math.abs(xc-x2)<=32.5&&Math.
 if(xc>45&&xc<555&&yc<673.5&&yc>12.5)
   {
 
-                if (keyIsDown(87)) {               //w上
+                if (keyIsDown(87)) {               //w--up
                   sameposition()
 
                  yc=yc-10;
-               } else if (keyIsDown(83)) {          //s下
+               } else if (keyIsDown(83)) {          //s--down
                  sameposition()
                  yc=yc+10;
                 }
-                if (keyIsDown(65)) {                //A左
+                if (keyIsDown(65)) {                //A--left
                   sameposition()
                  xc=xc-10;
-               } else if (keyIsDown(68)) {          //D右
+               } else if (keyIsDown(68)) {          //D--right
                  sameposition()
                  xc=xc+10;
                 }
@@ -146,18 +137,18 @@ if(xc>45&&xc<555&&yc<673.5&&yc>12.5)
 
 else if(xc<=45)
        {
-         if (keyIsDown(87)) {               //w上
+         if (keyIsDown(87)) {               //w--up
            sameposition()
 
           yc=yc-10;
-        } else if (keyIsDown(83)) {          //s下
+        } else if (keyIsDown(83)) {          //s--down
           sameposition()
           yc=yc+10;
          }
-         if (keyIsDown(65)) {                //A左
+         if (keyIsDown(65)) {                //A--left
            sameposition()
           xc=45;
-        } else if (keyIsDown(68)) {          //D右
+        } else if (keyIsDown(68)) {          //D--right
           sameposition()
           xc=xc+10;
          }
@@ -165,54 +156,54 @@ else if(xc<=45)
 
 else if(xc>=555)
        {
-         if (keyIsDown(87)) {               //w上
+         if (keyIsDown(87)) {               //w--up
            sameposition()
 
           yc=yc-10;
-        } else if (keyIsDown(83)) {          //s下
+        } else if (keyIsDown(83)) {          //s--down
           sameposition()
           yc=yc+10;
          }
-         if (keyIsDown(65)) {                //A左
+         if (keyIsDown(65)) {                //A--left
            sameposition()
           xc=xc-10;
-        } else if (keyIsDown(68)) {          //D右
+        } else if (keyIsDown(68)) {          //D--right
           sameposition()
           xc=555
          }
        }
      if(yc>=673.5)
        {
-         if (keyIsDown(87)) {               //w上
+         if (keyIsDown(87)) {               //w--up
            sameposition()
 
           yc=yc-10;
-        } else if (keyIsDown(83)) {          //s下
+        } else if (keyIsDown(83)) {          //s--down
           sameposition()
           yc=673.5
          }
-         if (keyIsDown(65)) {                //A左
+         if (keyIsDown(65)) {                //A--left
            sameposition()
           xc=xc-10;
-        } else if (keyIsDown(68)) {          //D右
+        } else if (keyIsDown(68)) {          //D--right
           sameposition()
           xc=xc+10;
          }
        }
 else if(yc<=12.5)
        {
-         if (keyIsDown(87)) {               //w上
+         if (keyIsDown(87)) {               //w--up
            sameposition()
 
           yc=12.5
-        } else if (keyIsDown(83)) {          //s下
+        } else if (keyIsDown(83)) {          //s--down
           sameposition()
           yc=yc+10;
          }
-         if (keyIsDown(65)) {                //A左
+         if (keyIsDown(65)) {                //A--left
            sameposition()
           xc=xc-10;
-        } else if (keyIsDown(68)) {          //D右
+        } else if (keyIsDown(68)) {          //D--right
           sameposition()
           xc=xc+10;
          }
@@ -305,7 +296,7 @@ if((shoot[i]==true))
 {ay[i]-=parseInt(Math.round(10-0.8*i))}
 }
 
-//3炮弹
+//3Bomb
 for(i=0;i<ax.length;i++)
 {
 if(ay[i]<=-5||(Math.abs(ax[i]-x)<=26&&Math.abs(ay[i]-y)<=26)||(Math.abs(ax[i]-x2)<=26&&Math.abs(ay[i]-y2)<=26)||(Math.abs(ax[i]-x4)<=26&&Math.abs(ay[i]-y4)<=26))
@@ -388,7 +379,7 @@ fill(color(102, 102, 51));
     function flypac()
              {
 
-               //球1小
+               //Ball1-s
                if((tnt==false))
                 {
                   fill(color(c1, c2, c3));
@@ -404,14 +395,14 @@ fill(color(102, 102, 51));
                   c1=Math.floor(Math.random()*500)
                   c2=Math.floor(Math.random()*500)
                   c3=Math.floor(Math.random()*500)
-                 //球1小 数字位置
+                 //Ball1-S numpos
     //              num1=Math.floor(Math.random()*10+1)
     //              num2=Math.floor(Math.random()*30+1)
-                 //球1小
+                 //Ball1-S
                   x=Math.floor(Math.random()*560+20)
                   y=20
-                  w=Math.floor(Math.random()*5+1)//动态控制
-                  m=Math.floor(Math.random()*5+1)//动态控制
+                  w=Math.floor(Math.random()*5+1)//Motion control
+                  m=Math.floor(Math.random()*5+1)//Motion control
                }
 
 
@@ -442,7 +433,7 @@ fill(color(102, 102, 51));
     function flypac2()
              {
 
-               //球1小
+               //Ball1-s
                if((tnt2==false))
                 {
                   fill(color(c4, c5, c6));
@@ -458,14 +449,14 @@ fill(color(102, 102, 51));
                   c4=Math.floor(Math.random()*500)
                   c5=Math.floor(Math.random()*500)
                   c6=Math.floor(Math.random()*500)
-                 //球1小 数字位置
+                 //Ball1-s numpos
     //              num1=Math.floor(Math.random()*10+1)
     //              num2=Math.floor(Math.random()*30+1)
-                 //球1小
+                 //Ball1-s
                   x2=Math.floor(Math.random()*560+20)
                   y2=20
-                  w2=Math.floor(Math.random()*5+1)//动态控制
-                  m2=Math.floor(Math.random()*5+1)//动态控制
+                  w2=Math.floor(Math.random()*5+1)//Motion controll
+                  m2=Math.floor(Math.random()*5+1)//Motion controll
                }
 
 
@@ -499,7 +490,7 @@ fill(color(102, 102, 51));
     function flypac4()
              {
 
-               //球1小
+               //Ball1-s
                if((tnt4==false))
                 {
                   fill(color(c7, c8, c9));
@@ -515,14 +506,14 @@ fill(color(102, 102, 51));
                   c7=Math.floor(Math.random()*500)
                   c8=Math.floor(Math.random()*500)
                   c9=Math.floor(Math.random()*500)
-                 //球1小 数字位置
+                 //Ball1-s numpos
     //              num1=Math.floor(Math.random()*10+1)
     //              num2=Math.floor(Math.random()*30+1)
-                 //球1小
+                 //Ball1-s
                   x4=300
                   y4=20
-                  w4=5//动态控制
-                  m4=5//动态控制
+                  w4=5//Motion controll
+                  m4=5//Motion controll
                }
 
                x4=x4+w4
@@ -558,7 +549,7 @@ fill(color(102, 102, 51));
     function flypac3()
              {
 
-               //球1小
+               //Ball1-s
 
                   fill(color(0, 0, 0));
                   ellipse(x3 ,y3 ,40 ,40 );
@@ -591,7 +582,7 @@ fill(color(102, 102, 51));
     function flypac6()
              {
 
-               //球1小
+               //Ball1-s
 
                   fill(color(0, 0, 0));
                   ellipse(x6 ,y6 ,40 ,40 );
@@ -624,7 +615,7 @@ fill(color(102, 102, 51));
     function flypac5()
              {
 
-               //球1小
+               //Ball1-s
 
                   fill(color(0, 0, 0));
                   ellipse(x5 ,y5 ,40 ,40 );
@@ -681,17 +672,17 @@ fill(color(102, 102, 51));
 
     function keyPressed() {
 /*
-     if (keyCode === 87) {               //w上
+     if (keyCode === 87) {               //w--up
        sameposition()
       yc=yc-20;
-    } else if (keyCode === 83) {          //s下
+    } else if (keyCode === 83) {          //s--down
       sameposition()
       yc=yc+20;
      }
-     if (keyCode === 65) {                //A左
+     if (keyCode === 65) {                //A--left
        sameposition()
       xc=xc-20;
-    } else if (keyCode === 68) {          //D右
+    } else if (keyCode === 68) {          //D--right
       sameposition()
       xc=xc+20;
      }
